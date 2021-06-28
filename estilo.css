@@ -1,0 +1,41 @@
+body{
+    background-color: black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color:#35b8b0;
+    height: 60px;
+    padding: 20px;
+}
+
+#esquerda{
+    background-color: red;
+    min-height: 50px;
+    width: 5%;
+    float: left;
+}
+
+#direita{
+    background-color: yellow;
+    min-height: 50px;
+    width: 95%
+    float: right
+}
+
+footer{
+    clear: both;
+    background-color: blue;
+    height: 30px;
+
+}
+
+.container{
+    width: 960px;
+    margin: auto;
+    height: auto;
+}
