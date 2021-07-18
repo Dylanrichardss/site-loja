@@ -33,9 +33,15 @@ footer{
     height: 30px;
 
 }
+img{
+    width: 40px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+img:hover{border: 2px solid red; zoom: 120%;}
 
-.container{
-    width: 960px;
-    margin: auto;
-    height: auto;
+#opa{
+    font-size: 20px;
+    width: 50%;
+    float: right;
 }
