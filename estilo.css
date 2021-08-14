@@ -16,7 +16,7 @@ header{
 #esquerda{
     background-color:#B0E0E6;
     min-height: 50px;
-    width: 5%;
+    width: auto;
     float: left;
 }
 
