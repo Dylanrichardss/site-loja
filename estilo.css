@@ -1,30 +1,22 @@
 body{
-    background-color: black;
+    background-color: #2F4F4F;
 }
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
 header{
-    background-color:#CDC9C9;
-    height: 60px;
-    padding: 20px;
+    background-color:#1E9585;
+    height: 15px;
+    padding: 8px;
 }
 
-#esquerda{
-    background-color:#B0E0E6;
-    min-height: 50px;
-    width: auto;
-    float: left;
-}
-
-#direita{
-    background-color: #FFE4B5;
-    min-height: 50px;
-    width: 95%
+#corpo{
+    background-color: #2F4F4F;
+    min-height: 60px;
+    width: 100%
     float: right
+}
+
+img{
+    width: 100px;
+    cursor: pointer;
 }
 
 footer{
@@ -33,15 +25,7 @@ footer{
     height: 30px;
 
 }
-img{
-    width: 40px;
-    border: 2px solid white;
-    cursor: pointer;
-}
-img:hover{border: 2px solid red; zoom: 120%;}
-
-#opa{
-    font-size: 20px;
-    width: 50%;
-    float: right;
+*{
+    margin: 0;
+    padding: 0;
 }
