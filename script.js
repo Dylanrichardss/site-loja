@@ -208,8 +208,8 @@ function somar() {
     var s = n1 + n2
     res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong> ${s} </strong>`
 }
-
-var a = window.document.getElementById('paleta')
+/*------------------------------------------------------*/
+var a = window.document.getElementById('paleta') // Classname e querry selector já foi tentado
 a.addEventListener('click', clique)
 a.addEventListener('mouseenter', entre)
 a.addEventListener('mouseout', saiu)
