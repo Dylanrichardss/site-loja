@@ -15,6 +15,7 @@ input{
 
 /*#area{
     font: normal 25pt Arial;
+
     background: green;
     color: white;
     width: 200px; largura
@@ -32,15 +33,59 @@ input{
     line-height: 0px;
     border-radius: 40px;
     text-align: center;
+    box-shadow:  0 0 1em #303030;
+    margin-left: 1%;
 }
 #paleta{
     font: normal 25pt Arial;
     color: black;
     background: white;
-    width: 300px;
+    width: 290px;
     height: 50px;
     line-height: 0px;
     border-radius: 40px;
     text-align: center;
     margin-top: 10px;
+    border: none;
+    box-shadow: 0 0 1em #303030;
+}
+#data{
+    background: #505050;
+    box-shadow: 0 0 1em black;
+    border-radius:20px;
+    min-width: 100px;
+    max-width: 20%;
+    text-align: center;
+    margin-top: 2%;
+}
+
+#boas_vindas{
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+}
+
+h1{
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+#prod1{
+    background: white;
+    color: black;
+    text-align: center;
+    width: 20%;
+
+}
+
+#prod2{
+    background: white;
+    color: black;
+    text-align: center;
+    width: 20%;
+
+}
+
+#produtos{
+    justify-content: space-around;
+    align-content: center;
 }

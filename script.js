@@ -181,7 +181,7 @@ if (condição){
 }
 
 Condição multipla
-switch(expressão){
+switch(expressão (variável)){
     case valor1:
 
         break pra parar. Obrigatório. Não esqueça
@@ -196,7 +196,119 @@ switch(expressão){
         break
     }
 
+
+
+    Repetições:
+
+    While 
+    repete enquanto for verdadeiro
+    while(condição){
+        bloco de comando
+    } quando for false, o fluxo vai ser desviado para fora
+    Testa e faz
+    Estrtura de repetição com teste no inicio
+
+
+    do{
+        bloco
+    } while (condição)
+    Faz bloco depois tenta a condição
+    Estrtura de repetição com teste no final
+
+    var c = 1
+do{
+    document.writeln(c)    
+    c++
+} while (c<=6)
+document.write('<br>')
+var d = 1
+while(d<=6){
+    document.writeln(d)
+    d++
+
+
+Estrutura de repetição com variável de controle
+
+for (inicio;teste;incr){
+    bloco
+}
+Ele inicia, faz o teste lógico. Se for verdadeiro, faz o bloco e depois incrementa:
+
+for (var i=1;i<=10;i++){
+    document.write(i)
+}
+Compare com o while: 
+var i = 1
+while (i<=10){
+    document.write(i)
+    i++
+} 
+
+
+Variáveis compostas - Array - Vetor
+elemento de um vetor é um par que agrupa o espaço da memória, o valor e o indice
+vaga a = [valor 1, valor2, valor3]
+Cada espaço da variável composta é a chave, indice ou key
+let num = [1,2,3]
+console.log('Nosso vetor é o ${num})
+num[3] = 6 Acrescenta um novo indice ao vetor. Maneira automatizada
+Maneira pra colocar na ultima posição
+num.push(7)
+num.length atributo para mostrar comprimento do array
+num.sort() pega todos os números e coloca em ordem crescente
+
+Exercicios 5 comentários
+Aquele for não é a unica maneira de fazer. Um jeito mais simplificado:
+for in
+
+for (let c in num ) //para cada posição dentro (ou em) de num, eu vou... código
+console.log
+
+num.indexOf(7)
+Vai retornar se tem e qual indice está o valor 7, dentro da variavel num
+-1 significa que o JS procurou mas não achou.
+
+Toda função pode ter chamada, parametros, ação e retorno
+Ações são executadas assim que são chamadas ou quando acontece um evento
+Um funcão pode pode receber parametros e retornar um resultado
+
+function ação(param){
+
+    return res
+}
+ação(5) Essa é a chamada
+Vai executar a função ação. O parametro da função vai valer 5. Vai fazer as contas que quiser e pode retornar um resultado
+
+
+function parimp(n){
+    if(n%2==0){
+        return 'par'
+    } else {
+        return 'impar'
+    }
+}
+var res = parimp(5)
+console.log (res)
+
 */
+
+var hoje= new Date() 
+var dataagora=document.getElementById('data')
+var switch_diasem = hoje.getDay()
+var diasem
+
+
+
+hora=hoje.getHours()
+alo=document.getElementById("boas_vindas")
+if(hora<12){
+    alo.innerText= "Bom dia!"
+} else if(hora<=18) {
+    alo.innerText= "Boa tarde!"
+} else {
+    alo.innerText= "Boa noite!"
+}
+
 
 function somar() {
     var opa = window.document.getElementById('texto') //caixa de texto 1 sem o valor, só a caixa
@@ -208,24 +320,62 @@ function somar() {
     var s = n1 + n2
     res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong> ${s} </strong>`
 }
-/*------------------------------------------------------*/
-var a = window.document.getElementById('paleta') // Classname e querry selector já foi tentado
-a.addEventListener('click', clique)
-a.addEventListener('mouseenter', entre)
-a.addEventListener('mouseout', saiu)
+
+/* Acima são as variáveis, o cumprimento e a soma ------------------------------------------------------*/
 
 
+var a = window.document.getElementById('paleta')
+var bt2 = window.document.getElementById('video')
+
+const bts = [a, bt2]
+for (i in bts){
+bts[i].addEventListener('click', clique)
+bts[i].addEventListener('mouseenter', entre)
+bts[i].addEventListener('mouseout', saiu)
+
+}
 
 function clique(){
-    a.style.background= 'Black'
-    a.style.color='white'
+this.style.background= 'Black'
+this.style.color='white'
 }
 
 function entre(){
-    a.style.background= 'lightgrey'
+this.style.background= 'lightgrey'
 }
 
 function saiu(){
-    a.style.background= 'white'
-    a.style.color='black'
+this.style.background= 'white'
+this.style.color='black'
 }
+
+
+switch(switch_diasem) {
+    case 0:
+        diaem = "Domingo"
+        break
+    case 1:
+        diasem = "Segunda-feira"
+        break
+    case 2:
+        diasem = "Terça-feira"
+        break
+    case 3:
+        diasem = "Quarta-feira"
+        break
+    case 4:
+        diasem = "Quinta-feira"
+        break
+    case 5:
+        diasem = "Sexta-feira"
+        break
+    case 6:
+        diasem = "Sábado"
+        break
+}
+
+dataagora.innerHTML = `${diasem}<br>${hoje.getDate()}/${hoje.getMonth()}/${hoje.getFullYear()}<br>${hora}:${hoje.getMinutes()}:${hoje.getSeconds()}`
+
+
+
+
